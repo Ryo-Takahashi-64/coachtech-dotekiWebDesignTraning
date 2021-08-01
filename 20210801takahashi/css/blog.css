@@ -1,0 +1,268 @@
+/* ページ共通アイテム */
+html {
+  font-family: italic, "游ゴシック", sans-serig;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+  transition: 0.2s;
+}
+li {
+  list-style: none;
+}
+.img {
+  width: 100%;
+}
+body {
+  line-height: 1.5;
+}
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100%;
+}
+.header__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  margin: 0 30px;
+}
+.header__logo img {
+  width: 65px;
+}
+.header__nav-list {
+  display: flex;
+}
+.header__nav-item {
+  margin-right: 30px;
+}
+.header__nav-item:last-child {
+  margin-right: 0;
+}
+.header__nav-item a {
+  color: #000;
+  font-weight: bold;
+}
+.header__menu__nav {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  background-color: #fff;
+  transition: 0.7s;
+  text-align: center;
+  font-size: 18px;
+}
+.header__menu__nav-list {
+  padding-top: 80px;
+}
+.header__menu {
+  display: none;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+.header__menu__line--top,
+.header__menu__line--middle,
+.header__menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+.header__menu__line--top {
+  top: 0;
+}
+.header__menu__line--middle {
+  top: 14px;
+}
+.header__menu__line--bottom {
+  bottom: 0;
+}
+.header__menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+.header__menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+.header__menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+@media screen and (max-width: 768px) {
+.header__nav {
+  display: none;
+}
+.header__menu {
+  display: inline-block;
+}
+.header__menu__nav-item {
+  margin-top: 40px;
+}
+.header__menu__nav-item a {
+  color: #00f;
+}
+.header__menu__nav.in {
+  transform: translateX(100%);
+}
+}
+
+/* MAIN　コンテンツ */
+/* MAIN　共通部品 */
+.main {
+  padding-top: 70px;
+}
+.main__content {
+  width: 1080px;
+  padding: 80px 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+.main__content {
+  width: 85%;
+}
+}
+
+/* MAIN　共通部品　ボタン */
+.main__content__btn {
+  display: inline-block;
+  width: 280px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  background: #c00;
+}
+
+/* MAIN　共通部品　firstview */
+.firstview {
+  background: url(../img/mv.png) no-repeat center;
+  background-size: cover;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* MAIN コンテンツ */
+.main__blog__wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main__blog__card {
+  width: 32%;
+}
+.main__blog__card-img img{
+  width: 100%;
+}
+.main__blog__card-desc {
+  padding: 5px 0 15px;
+}
+.main__blog__card-dt {
+  font-size: 14px;
+}
+.main__blog__card-ttl {
+  font-size: 18px;
+}
+.main__blog__card-ttl .main__blog__card--link {
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+.main__blog__wrap {
+  justify-content: center;
+  margin: 0 auto;
+}
+.main__blog__card {
+  width: 100%;
+}
+}
+
+/* MAIN　共通部品　お問い合わせ欄 */
+.main__contact {
+  height: 330px;
+  background: #efefef;
+  display: flex;
+  justify-content: center;
+}
+.main__contact__item {
+  width: 100%;
+  text-align: center;
+  margin: 60px 10%;
+}
+.main__contact__ttl {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 0;
+}
+.main__contact__msg {
+  padding-bottom: 40px;
+}
+
+/* フッタ */
+.footer {
+  color: #fff;
+  background: #222;
+}
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 1100px;
+  height: 60px;
+  font-size: 12px;
+  margin: 0 auto;
+}
+.footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer__nav-item {
+  padding: 0 15px;
+  border-right: 1px solid #fff;
+}
+.footer__nav-item:last-child {
+  border-right: 0;
+}
+.footer__nav-item a {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+.footer__content {
+  width: 100%;
+  height: 250px;
+  padding: 10px 0;
+}
+.footer__content small {
+  margin: 0 auto;
+}
+.footer__nav-item {
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0;
+  border-right: none;
+}
+.footer__nav-item:first-child {
+  margin-top: 0;
+}
+}
